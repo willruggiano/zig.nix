@@ -1,0 +1,14 @@
+### direnv
+.direnv
+.envrc
+
+### zig
+zig-cache/
+zig-out/
+build/
+build-*/
+docgen_tmp/
+
+### nix
+result
+.pre-commit-config.yaml
