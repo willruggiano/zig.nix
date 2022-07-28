@@ -32,7 +32,10 @@
         nativeBuildInputs = with pkgs; [zig-latest];
         inherit (self.checks."${system}".pre-commit) shellHook;
       };
-    }) // {
+
+      packages.default = pkgs.zig-latest;
+    })
+    // {
       overlays.default = import ./packages;
     };
 }
