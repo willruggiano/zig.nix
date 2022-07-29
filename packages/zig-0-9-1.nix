@@ -3,24 +3,24 @@
   stdenv,
   fetchFromGitHub,
   cmake,
-  llvmPackages_14,
+  llvmPackages_13,
   libxml2,
   zlib,
 }:
-stdenv.mkDerivation rec {
+llvmPackages_13.stdenv.mkDerivation rec {
   pname = "zig";
-  version = "0.10.0";
+  version = "0.9.1";
 
   src = fetchFromGitHub {
     owner = "ziglang";
     repo = pname;
-    rev = "c650ccfca719b695fe7752f9126e8dbcc2ab4d6d";
-    hash = "sha256-/QjpF1F2N1JdhypXmXqSYilvCCJobf3e/uG2tUp/fwA=";
+    rev = version;
+    hash = "sha256-x2c4c9RSrNWGqEngio4ArW7dJjW0gg+8nqBwPcR721k=";
   };
 
   nativeBuildInputs = [
     cmake
-    llvmPackages_14.llvm.dev
+    llvmPackages_13.llvm.dev
   ];
 
   buildInputs =
@@ -28,7 +28,7 @@ stdenv.mkDerivation rec {
       libxml2
       zlib
     ]
-    ++ (with llvmPackages_14; [
+    ++ (with llvmPackages_13; [
       libclang
       lld
       llvm
@@ -41,7 +41,6 @@ stdenv.mkDerivation rec {
   cmakeFlags = [
     # file RPATH_CHANGE could not write new RPATH
     "-DCMAKE_SKIP_BUILD_RPATH=ON"
-    "-DZIG_STATIC_ZLIB=ON"
   ];
 
   doCheck = true;

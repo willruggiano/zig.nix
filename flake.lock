@@ -15,6 +15,21 @@
         "type": "github"
       }
     },
+    "flake-utils_2": {
+      "locked": {
+        "lastModified": 1656928814,
+        "narHash": "sha256-RIFfgBuKz6Hp89yRr7+NR5tzIAbn52h8vT6vXkYjZoM=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "7e2a3b3dfd9af950a856d66b0a7d01e3c18aa249",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1658937758,
@@ -69,21 +84,24 @@
         "nixpkgs": "nixpkgs",
         "pre-commit": "pre-commit",
         "utils": "utils",
-        "zig-flake": "zig-flake"
+        "zig": "zig"
       }
     },
     "utils": {
+      "inputs": {
+        "flake-utils": "flake-utils_2"
+      },
       "locked": {
-        "lastModified": 1656928814,
-        "narHash": "sha256-RIFfgBuKz6Hp89yRr7+NR5tzIAbn52h8vT6vXkYjZoM=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "7e2a3b3dfd9af950a856d66b0a7d01e3c18aa249",
+        "lastModified": 1657226504,
+        "narHash": "sha256-GIYNjuq4mJlFgqKsZ+YrgzWm0IpA4axA3MCrdKYj7gs=",
+        "owner": "gytis-ivaskevicius",
+        "repo": "flake-utils-plus",
+        "rev": "2bf0f91643c2e5ae38c1b26893ac2927ac9bd82a",
         "type": "github"
       },
       "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
+        "owner": "gytis-ivaskevicius",
+        "repo": "flake-utils-plus",
         "type": "github"
       }
     },
@@ -102,7 +120,7 @@
         "type": "github"
       }
     },
-    "zig-flake": {
+    "zig": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
@@ -111,11 +129,11 @@
       },
       "locked": {
         "dir": "contrib",
-        "lastModified": 1659051579,
-        "narHash": "sha256-xm2+1ERClfBf2e1JoxOLIMSw1WNVMHQC0CVwvyFOpHw=",
+        "lastModified": 1659056872,
+        "narHash": "sha256-JxL1KvNQ5NG4I+3Fgxw3p9E708pqopKguo39sfShF14=",
         "owner": "willruggiano",
         "repo": "zig",
-        "rev": "650525b44487f354d400129c144d73bf3ecc6896",
+        "rev": "7344668eeab9d2ea5573f62660ca0decc0c3b10a",
         "type": "github"
       },
       "original": {
