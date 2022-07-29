@@ -68,7 +68,8 @@
       "inputs": {
         "nixpkgs": "nixpkgs",
         "pre-commit": "pre-commit",
-        "utils": "utils"
+        "utils": "utils",
+        "zig-flake": "zig-flake"
       }
     },
     "utils": {
@@ -83,6 +84,45 @@
       "original": {
         "owner": "numtide",
         "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "utils_2": {
+      "locked": {
+        "lastModified": 1656928814,
+        "narHash": "sha256-RIFfgBuKz6Hp89yRr7+NR5tzIAbn52h8vT6vXkYjZoM=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "7e2a3b3dfd9af950a856d66b0a7d01e3c18aa249",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "zig-flake": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "utils": "utils_2"
+      },
+      "locked": {
+        "dir": "contrib",
+        "lastModified": 1659051579,
+        "narHash": "sha256-xm2+1ERClfBf2e1JoxOLIMSw1WNVMHQC0CVwvyFOpHw=",
+        "owner": "willruggiano",
+        "repo": "zig",
+        "rev": "650525b44487f354d400129c144d73bf3ecc6896",
+        "type": "github"
+      },
+      "original": {
+        "dir": "contrib",
+        "owner": "willruggiano",
+        "ref": "feat/nix-flake",
+        "repo": "zig",
         "type": "github"
       }
     }
