@@ -3,7 +3,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     pre-commit.url = "github:cachix/pre-commit-hooks.nix";
     utils.url = "github:gytis-ivaskevicius/flake-utils-plus";
-    zig.url = "github:willruggiano/zig/feat/nix-flake?dir=contrib";
+    zig.url = "github:willruggiano/zig?dir=contrib";
     zig.inputs.nixpkgs.follows = "nixpkgs";
   };
 
